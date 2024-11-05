@@ -1,91 +1,95 @@
-*{
-    font-family: 'Poppins', sans-serif;
+/* Reset básico de estilo */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
-body{
-    background-image: url("image2.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-}
-.box{
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-image: url('image2.jpg'); /* Substitua pela URL da sua imagem */
+    background-size: cover; /* Cobrirá toda a área */
+    background-position: center; /* Centraliza a imagem */
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 90vh;
+    height: 100vh;
+    filter: brightness(0.8); /* Escurece a imagem para melhorar a legibilidade do texto */
 }
-.container{
-    width: 350px;
+
+.box {
+    background: #fff; /* Fundo branco para o formulário */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    width: 300px; /* Largura fixa */
+    padding: 20px; /* Espaçamento interno */
+}
+
+.container {
     display: flex;
-    flex-direction: column;
-    padding: 0 15px 0 15px;
+    flex-direction: column; /* Layout em coluna */
 }
-span{
-    color: #0a0a0a;
-    font-size: small;
-    display: flex;
-    justify-content: center;
-    padding: 10px 0 15px 0;
+
+.top-header {
+    text-align: center; /* Centraliza texto */
+    margin-bottom: 20px; /* Espaçamento inferior */
 }
-header{
-    color: #f3eef5;
-    font-size: 30px;
-    display: flex;
-    justify-content: center;
-    padding: 0 0 15px 0; 
+
+.top-header span {
+    font-size: 14px; /* Tamanho da fonte do subtítulo */
+    color: #666; /* Cor cinza para o texto secundário */
 }
-.input-field{
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 15px;
+
+.top-header header {
+    font-size: 24px; /* Tamanho da fonte do título */
+    font-weight: bold; /* Negrito */
+    color: #333; /* Cor do texto principal */
 }
-.input-field .input{
-    height: 45px;
-    width: 87%;
-    border: none;
-    outline: none;
-    border-radius: 30px;
-    color: #fff;
-    padding: 0 0 0 42px;
-    background: rgba(255,255,255,0.1);
+
+.input-field {
+    position: relative; /* Posição relativa para posicionar ícones */
+    margin-bottom: 15px; /* Espaçamento inferior */
 }
-i{
-    position: relative;
-    top: -31px;
-    left: 17px;
-    color: #fff;
+
+.input {
+    width: 100%; /* Largura total do campo de entrada */
+    padding: 10px 40px; /* Espaçamento interno */
+    border: 1px solid #130101; /* Borda cinza */
+    border-radius: 5px; /* Bordas arredondadas */
+    font-size: 16px; /* Tamanho da fonte */
+    outline: none; /* Remove contorno padrão */
+    transition: border-color 0.3s; /* Efeito de transição */
 }
-::-webkit-input-placeholder{
-    color: #fff;
+
+.input:focus {
+    border-color: #020e1a50; /* Cor da borda quando focado */
 }
-.submit{
-    border: none;
-    border-radius: 30px;
-    font-size: 15px;
-    height: 45px;
-    outline: none;
-    width: 100%;
-    background: rgba(255,255,255,0.7);
-    cursor: pointer;
-    transition: .3s;
+
+.input-field i {
+    position: absolute; /* Posição absoluta para ícones */
+    top: 50%; /* Centraliza verticalmente */
+    left: 10px; /* Espaçamento à esquerda */
+    transform: translateY(-50%); /* Ajusta para centralizar */
+    color: #0e0d0d; /* Cor dos ícones */
 }
-.submit:hover{
-    box-shadow: 1px 5px 7px 1px rgba(0, 0, 0, 0.2);
+
+.submit {
+    width: 100%; /* Largura total do botão */
+    padding: 10px; /* Espaçamento interno */
+    border: none; /* Remove borda padrão */
+    border-radius: 5px; /* Bordas arredondadas */
+    background-color: #456a91a2; /* Cor de fundo azul */
+    color: #fff; /* Cor do texto */
+    font-size: 16px; /* Tamanho da fonte */
+    cursor: pointer; /* Cursor de ponteiro */
+    transition: background-color 0.3s; /* Efeito de transição */
 }
-.bottom{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    font-size: small;
-    color: #fff;
-    margin-top: 10px;
+
+.submit:hover {
+    background-color: #0d274448; /* Cor de fundo mais escura ao passar o mouse */
 }
-.left{
-    display: flex;
+
+.bottom {
+    display: flex; /* Layout flexível */
+    justify-content: space-between; 
 }
-label a{
-    color: #fff;
-    text-decoration: none;
-}                                          
-                                         
-            

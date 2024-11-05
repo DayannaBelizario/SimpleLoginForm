@@ -1,44 +1,48 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="pt-BR"> <!-- Corrigido para o idioma correto -->
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="boxicons/css/boxicons.css">
-    <title>Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <title>Página de Login</title> <!-- Título mais descritivo -->
 </head>
 <body>
     <div class="box">
         <div class="container">
             <div class="top-header">
-                <span>Welcome</span>
-                <header>Iniciar Sesión</header>
+                <span>Inspiração Diária</span>
+                <header>Iniciar Sessão</header>
             </div>
 
-            <div class="input-field">
-                <input type="text" class="input" placeholder="Usuario" required>
-                <i class="bx bx-user"></i>
-            </div>
-            <div class="input-field">
-                <input type="password" class="input" placeholder="Senha" required>
-                <i class="bx bx-lock-alt"></i>
-            </div>
-            <div class="input-field">
-                <input type="submit" class="submit" value="Inicio">
-            </div>
+            <!-- Formulário de Login -->
+            <form action="login.php" method="POST"> <!-- Formulário adicionado -->
+                <div class="input-field">
+                    <input type="text" class="input" placeholder="Usuário" name="usuario" required aria-label="Usuário"> <!-- Acessibilidade -->
+                    <i class="bx bx-user"></i>
+                </div>
+                <div class="input-field">
+                    <input type="password" class="input" placeholder="Senha" name="senha" required aria-label="Senha"> <!-- Acessibilidade -->
+                    <i class="bx bx-lock-alt"></i>
+                </div>
+                <div class="input-field">
+                    <input type="submit" class="submit" value="Iniciar"> <!-- Alterado para 'Iniciar' -->
+                </div>
 
-            <div class="bottom">
-                <div class="left">
-                    <input type="checkbox"  id="check">
-                    <label for="check"> Recordarme</label>
+                <div class="bottom">
+                    <div class="left">
+                        <input type="checkbox" id="check" name="lembrar">
+                        <label for="check"> Lembre-se de mim</label> <!-- Correção de texto -->
+                    </div>
+                    <div class="right">
+                        <label><a href="#">Esqueceu a senha?</a></label>
+                    </div>
                 </div>
-                <div class="right">
-                    <label><a href="#">¿Olvidaste la contraseña?</a></label>
-                </div>
-            </div>
+            </form>
+            <!-- Fim do Formulário -->
         </div>
     </div>
 </body>
 </html>
-           
